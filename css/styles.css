@@ -24,6 +24,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+}
+
 /* common */
 
 .container {
@@ -132,6 +136,7 @@ a {
 }
 
 .btn-order {
+  border: none;
   display: block;
   margin: 0 auto;
   height: 56px;
@@ -157,9 +162,19 @@ a {
 
 .benefits {
 }
-.benefits-title {
-  display: none;
+
+.visually-hidden {
+  position: absolute; /* Убираем из потока документа */
+  width: 1px; /* Минимальная ширина */
+  height: 1px; /* Минимальная высота */
+  padding: 0; /* Убираем отступы */
+  margin: -1px; /* Убираем внешние отступы */
+  overflow: hidden; /* Скрываем содержимое */
+  clip: rect(0, 0, 0, 0); /* Ограничиваем область видимости */
+  white-space: nowrap; /* Не переносим текст */
+  border: 0; /* Убираем границы */
 }
+
 .benefits-list {
   margin: 0 auto;
   display: flex;
@@ -237,7 +252,7 @@ a {
 }
 
 .portfolio-title {
-  margin-bottom: 72px;
+  margin-bottom: 8px;
   text-transform: capitalize;
   font-size: 36px;
   line-height: 1.11;
@@ -254,11 +269,9 @@ a {
 }
 
 .portfolio-list-container {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  padding-left: 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
+  padding: 32px 16px;
 }
 .portfolio-item {
 }
@@ -286,7 +299,7 @@ a {
 }
 .footer-logo {
   display: inline-block;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 .footer-logo .logo-part {
   font-weight: 700;
